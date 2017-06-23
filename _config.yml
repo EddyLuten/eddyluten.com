@@ -1,0 +1,33 @@
+# Site settings
+title: Eddy Luten
+email: eddyluten@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Freelance Programmer at large in the Bay Area.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: eddyluten
+github_username:  EddyLuten
+linkedin_username: eddyluten
+excerpt_separator: <!--more-->
+google_analytics: UA-301718-12
+permalink: /:title
+
+# Build settings
+markdown: kramdown
+theme: minima
+sass:
+  style: compressed
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - CNAME
+  - README.md
