@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-06-23T11:23:52-07:00</updated><id>/</id><title type="html">Eddy Luten</title><subtitle>Freelance Programmer at large in the Bay Area.
+</subtitle><entry><title type="html">Hello Again, Macbook</title><link href="/hello-again-macbook" rel="alternate" type="text/html" title="Hello Again, Macbook" /><published>2017-06-16T00:00:00-07:00</published><updated>2017-06-16T00:00:00-07:00</updated><id>/hello-again-macbook</id><content type="html" xml:base="/hello-again-macbook">&lt;div class=&quot;center bottom-padded&quot;&gt;&lt;img src=&quot;/images/hello-again.jpg&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Well, that didn’t take too long.&lt;/p&gt;
+
+&lt;p&gt;If you’ve been following along, you know that I’ve been trying to use Linux for my local development purposes on &lt;a href=&quot;/bye-macbook-hello-intel-nuc&quot;&gt;an Intel NUC&lt;/a&gt; (as well as a Lenovo laptop). I have to say, I still love the NUC and am going to find another use for it somehow, I’m just not sure what yet. However, Linux was somewhat of a disaster for me.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I like to think that I really gave desktop Linux a fighting chance. I’ve been using it for all my development since &lt;a href=&quot;/elementary-os-first-impressions&quot;&gt;October of 2016&lt;/a&gt; in one flavor or another. I used elementaryOS until around February when I got fed up with its quirks and switched to Ubuntu. Well, I tried. It was an unending battle with drivers, external displays, wiped USB drives, failing installers, and this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;twitter-timeline&quot; data-partner=&quot;tweetdeck&quot; href=&quot;https://twitter.com/eddyluten/timelines/875852496966533120&quot;&gt;Ubuntu Trash - Curated tweets by eddyluten&lt;/a&gt; &lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Thankfully, I have almost all of my code in private GitHub repositories, but I did lose some prototypes. I’m not sure if I shouldn’t have relied on Ubuntu’s Trash mechanism working correctly or if it should just work out of the box, but I don’t really care anymore at this point.&lt;/p&gt;
+
+&lt;p&gt;So, even though no major Mac changes were announced at WWDC a few days before, I bit the bullet and pulled the trigger on a new 13” 2017 MacBook, which arrived on my doorstep yesterday.&lt;/p&gt;
+
+&lt;p&gt;So far, I don’t like its lack of non-USB C ports, the touchbar is a bit awkward to use, and the price is just plain wrong ($2,300 for a 13”, 3.3GHz i5, 16GB of RAM). However, I do like its light weight, the retina screen, the huge touchpad, its battery life, and the changes to macOS since El Capitan.&lt;/p&gt;
+
+&lt;p&gt;Overall, not too bad.&lt;/p&gt;
+
+&lt;p&gt;I may do a long term follow up to see if it will last as long as its 2012 15” predecessor. Until then, I’m just happy that I can move files to the trash and potentially restore them if I really want.&lt;/p&gt;</content><author><name></name></author><summary type="html">Well, that didn’t take too long. If you’ve been following along, you know that I’ve been trying to use Linux for my local development purposes on an Intel NUC (as well as a Lenovo laptop). I have to say, I still love the NUC and am going to find another use for it somehow, I’m just not sure what yet. However, Linux was somewhat of a disaster for me.</summary></entry><entry><title type="html">PortAudio Panic and No Devices Found</title><link href="/portaudio-panic-and-no-devices-found" rel="alternate" type="text/html" title="PortAudio Panic and No Devices Found" /><published>2017-02-13T23:00:00-08:00</published><updated>2017-02-13T23:00:00-08:00</updated><id>/portaudio-panic-and-no-devices-found</id><content type="html" xml:base="/portaudio-panic-and-no-devices-found">&lt;p&gt;Leaving this here for the poor souls on Linux systems that run into errors accessing the default input or output devices using PortAudio and get nothing back.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Maybe you’re using rust-portaudio and your application panics after accessing &lt;code class=&quot;highlighter-rouge&quot;&gt;default_output_device&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;default_intput_device&lt;/code&gt; even though you clearly have default audio devices set:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;thread ‘main’ panicked at ‘called `Option::unwrap()` on a `None` value’&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This pretty much means that you don’t have libasound installed on your system. While the PortAudio project &lt;a href=&quot;http://portaudio.com/docs/v19-doxydocs/compile_linux.html&quot;&gt;mentions this&lt;/a&gt; in its build documentation, the Rust version of this library doesn’t explicitly mention this dependency.&lt;/p&gt;
+
+&lt;p&gt;On Debian-based systems (Ubuntu and whathaveye), run the following command to cure this:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libasound2 libasound2-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Leaving this here for the poor souls on Linux systems that run into errors accessing the default input or output devices using PortAudio and get nothing back.</summary></entry><entry><title type="html">Getting Rusty Code and Racer to Work Together</title><link href="/getting-rusty-code-and-racer-to-work-together" rel="alternate" type="text/html" title="Getting Rusty Code and Racer to Work Together" /><published>2017-02-13T23:00:00-08:00</published><updated>2017-02-13T23:00:00-08:00</updated><id>/getting-rusty-code-and-racer-to-work-together</id><content type="html" xml:base="/getting-rusty-code-and-racer-to-work-together">&lt;p&gt;While installing the Rusty Code extension in Visual Studio Code is pretty straightforward, Racer wouldn’t work out of the box after clicking the “install dependencies” (or whatever it was called) button. In fact, I never received a confirmation message that the dependencies finished installing.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;After a while of no progress in the output window, I checked in the terminal and saw that Racer installed fine, but VS Code showed the following error:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;RUST_SRC_PATH environment variable must be set to point to the src directory of a rust checkout.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, it turns out that a default Rust install doesn’t come with the source code and simply running the following command makes the whole thing work:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rustup component add rust-src
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If running &lt;code class=&quot;highlighter-rouge&quot;&gt;rustup&lt;/code&gt; doesn’t work, make sure that your &lt;code class=&quot;highlighter-rouge&quot;&gt;cargo/bin&lt;/code&gt; directory is added to your &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt;, by adding the following line to your &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; script:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.cargo/bin:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Or wherever else Cargo is installed on your machine.&lt;/p&gt;</content><author><name></name></author><summary type="html">While installing the Rusty Code extension in Visual Studio Code is pretty straightforward, Racer wouldn’t work out of the box after clicking the “install dependencies” (or whatever it was called) button. In fact, I never received a confirmation message that the dependencies finished installing.</summary></entry><entry><title type="html">Bye MacBook, Hello Intel NUC</title><link href="/bye-macbook-hello-intel-nuc" rel="alternate" type="text/html" title="Bye MacBook, Hello Intel NUC" /><published>2016-10-30T00:00:01-07:00</published><updated>2016-10-30T00:00:01-07:00</updated><id>/bye-macbook-hello-intel-nuc</id><content type="html" xml:base="/bye-macbook-hello-intel-nuc">&lt;p&gt;For a while now, my 2011 13” i5 MacBook Air which I use for development purposes has been showing signs of pending death: flickering screen when moving the lid, excessive heat, inability to be charged, killing 2 replacement batteries and 3 chargers, slowing down with new OS X/macOS installs, etc. etc.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;So, I figured that it was time for a new machine. The MacBook Air, whose form factor I love, served me well (not counting the recent death rattles) for 5 years, so I eagerly awaited the October 27 Mac event, eyeing either a replacement MacBook Air or a new iMac. In short, this is what happened:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;No new iMacs, Mac Mini, NOR MacBook Air models.&lt;/li&gt;
+  &lt;li&gt;Removal of ports that I use &lt;em&gt;all the time&lt;/em&gt; on my MacBook.&lt;/li&gt;
+  &lt;li&gt;An uninspired hardware refresh.&lt;/li&gt;
+  &lt;li&gt;Entry level MBP is $1,499?! And no Touch Bar. I mean, I didn’t want one, but I think that it should have one for 1.5k.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are many more threads on Reddit and a ton of other sites that lament the event, so I won’t dedicate more space to it except that I bought a 15” i7 MacBook Pro with 16GB of RAM and NVIDIA GPU in 2012 for only $300 more than the cost of the current entry level MPB. Needless to say, I won’t be continuing my usage of Apple hardware.&lt;/p&gt;
+
+&lt;h1 id=&quot;so-what-are-my-choices&quot;&gt;So What Are My Choices?&lt;/h1&gt;
+
+&lt;p&gt;My initial reaction was to either dual boot my gaming machine into macOS by turning it into a Hackintosh. Something I had done before, which worked &lt;em&gt;okay&lt;/em&gt;. The main issue is that my gaming machine is also from the stone age of 2011 and carries around an i7 2600k running on a P67 motherboard. This works fine for gaming, but not so much for the Clover bootloader.&lt;/p&gt;
+
+&lt;p&gt;My second idea was to build a tiny i3 6100 based machine using a HTPC form factor case. And I had it all specced out, costing about $390 in total. But then I came across a mention about Intel NUC while watching an HTPC case review. I was surprised that I never heard of it before.&lt;/p&gt;
+
+&lt;h1 id=&quot;enter-nuc&quot;&gt;Enter NUC&lt;/h1&gt;
+
+&lt;p&gt;Intel NUC is a PC sans RAM, storage (and, thus, OS) for as little money as you could put together an HTPC yourself. I went to the Intel site, saw a version of it with an i3 6100U (NUC6i3SYH), found it on Amazon for $277.60 and smashed the buy button.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/nuc.jpg&quot; alt=&quot;Height&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I had an unused SSD laying around, a Samsung Evo 850 250GB, and ordered some cheap-ish DDR4 RAM from Crucial, 16GB in total. The total cost for all the hardware, without shipping and taxes was $347.59. I had that SSD laying around, so if you wanted one with an Evo 850 like mine, add about $99.99 to that number.&lt;/p&gt;
+
+&lt;p&gt;So what’s better than building one from scratch? Features. The motherboard you get in a MicroATX machine at that price point does not support Bluetooth, WiFi, mini-DisplayPort connectivity, VESA mountability, SD card reader, and has a much worse form-factor to accommodate the power supply and fans.&lt;/p&gt;
+
+&lt;p&gt;The height of the NUC is about the same as 5 CD jewel cases stacked on top of eachother at about 53mm, but with a smaller surface area. You couldn’t put an optical drive in one of these simply because a disc is larger than the width + height of this thing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/nuc2.jpg&quot; alt=&quot;CD&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As I mentioned above, it comes with a VESA mounting bracket so you could attach the whole kit and caboodle to the back of your screen for the most minimal footprint possible and to get that all-in-one feel. Sadly, my monitor’s stand is attached to the VESA mount, so it’s not possible for me. However, I will probably Jerry-rig something together to get it off my desk.&lt;/p&gt;
+
+&lt;p&gt;Putting the hardware together was incredibly easy. Four screws holds a plate exposing the internals. This model comes with a cradle for a 2.5” HDD, which you can just slide in without worrying about screws or cables. You slip it in and you’re done. Adding RAM is the same procedure as adding RAM to a laptop, a simple process of lining up the notches and pushing them into the slots. It took less than 5 minutes to unscrew, pop in the SSD, pop in the RAM, and screw it back together. Easiest. Assembly. Ever.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/nuc3.jpg&quot; alt=&quot;Guts&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;whats-next&quot;&gt;What’s Next?&lt;/h1&gt;
+
+&lt;p&gt;I’m installing elementary OS onto it instead of macOS. Actually, I already have and am typing this from elementary OS. The system feels fast and responsive, which I didn’t expect from an i3 processor and an integrated graphics chip driving a 2560x1440 screen at 144hz. Supposedly, the NUC is compatible with Hackintosh builds, but I wanted to try something new first and it’s been a while since I’ve used Linux on the desktop. If it doesn’t work out, I’ll attempt a Hackintosh build later on. For now, I am impressed with my sub-$350 PC and I’ll write a post with my elementary OS impressions after I’ve used it for a bit.&lt;/p&gt;</content><author><name></name></author><summary type="html">For a while now, my 2011 13” i5 MacBook Air which I use for development purposes has been showing signs of pending death: flickering screen when moving the lid, excessive heat, inability to be charged, killing 2 replacement batteries and 3 chargers, slowing down with new OS X/macOS installs, etc. etc.</summary></entry><entry><title type="html">Elementary OS First Impressions</title><link href="/elementary-os-first-impressions" rel="alternate" type="text/html" title="Elementary OS First Impressions" /><published>2016-10-30T00:00:00-07:00</published><updated>2016-10-30T00:00:00-07:00</updated><id>/elementary-os-first-impressions</id><content type="html" xml:base="/elementary-os-first-impressions">&lt;div class=&quot;center bottom-padded&quot;&gt;&lt;img src=&quot;/images/elementary-1.png&quot; alt=&quot;elementary OS screenshot&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;It’s been about a week of using elementary OS and I’ve compiled a few of my first impressions. First off, I want to start off with that I understand that elementary is still somewhat immature, so don’t take any of the criticism as me putting the project on blast. Far from it, in fact, but more on that later.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Installing elementary OS was a breeze. It’s about as simple as installing macOS from a USB dongle. All my Intel NUC’s onboard hardware was properly detected, HDD partitioning was not an issue and all happened automatically, and there was an option to enable encryption wherever it was applicable. Great process overall.&lt;/p&gt;
+
+&lt;p&gt;Boot times out of the box are snappy, it takes only a few seconds to go from POST to the OS itself. When you’re presented with the desktop, it all looks really nice and sleek, but a bit derivative. It does look like it’s emulating macOS, but that’s not necessarily a bad thing. It has a different design aesthetic than macOS when it comes to icon design and where it places UI elements, but overall, it feels like a macOS clone.&lt;/p&gt;
+
+&lt;div class=&quot;center bottom-padded&quot;&gt;&lt;img src=&quot;/images/elementary-2.png&quot; alt=&quot;elementary OS screenshot&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;And that’s where most of my issues that I have with the UX come from. Since it looks so much like macOS, you kind of expect it to behave like macOS as well and have the same features. Now I know that’s not a fair expectation, but it’s just the feeling I get when using it. Some features were copied, like hitting ⌘+Space for the Spotlight menu, called &lt;em&gt;App Launcher&lt;/em&gt; or &lt;em&gt;Applications&lt;/em&gt; in elementary, but doesn’t offer much of the same functionality other than searching for applications or application features.&lt;/p&gt;
+
+&lt;div class=&quot;center bottom-padded&quot;&gt;&lt;img src=&quot;/images/elementary-3.png&quot; alt=&quot;elementary OS screenshot&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;One of these things that I feel is missing, for example, is the ability to change your screen’s refresh rate, which has to be done through a system command, executed on every boot instead of through a drop-down menu. It kind of sucks since the frequencies listed aren’t actually the parameters you use for the application, see this screenshot:&lt;/p&gt;
+
+&lt;div class=&quot;center bottom-padded&quot;&gt;&lt;img src=&quot;/images/elementary-4.png&quot; alt=&quot;elementary OS screenshot&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Coming from macOS, I am very used to the keyboard shortcuts for Mac, so hitting ⌘-based commands is something I do all of the time. It doesn’t help that I use a Mac at work and have to switch my muscle memory every night when I come home. I &lt;em&gt;could&lt;/em&gt; remap all of the keys, but I feel like that’s kind of missing the point of moving to a new OS. For now I’ll just deal, even if that means opening up a Terminal window every time I want to open a new browser tab (⌘+T).&lt;/p&gt;
+
+&lt;p&gt;Third party software can be a bit of a hassle to install, such as Google Chrome if you’re not used to installing downloaded packages with dpgk via the Terminal, but once it’s installed, it’s done. I do wish there was some kind of GUI-based installer for some of the &lt;code class=&quot;highlighter-rouge&quot;&gt;.deb&lt;/code&gt; packages downloaded, though. Spotify in particular was a mess to install with missing dependencies not automatically resolving and, once it was installed, missing an option to minimize the player window.&lt;/p&gt;
+
+&lt;p&gt;Speaking of other things not working, I could not get my Bose QC35’s working as an audio device. I was able to pair with it and read some of the workarounds online, but none of them seemed to work for me. If you got yours to work, I’d love to hear about it since I’m stuck using wired headphones via my monitor right now. &lt;strong&gt;Edit:&lt;/strong&gt; got them to work simply via using the Bose Connect app on my iPhone and the elementary Bluetooth pairing app. Not sure what I did differently, but it all works great now.&lt;/p&gt;
+
+&lt;p&gt;Overall, the elementary OS experience has been good out of the box. I didn’t have to make many adjustments to my development toolchain since most of the tools on macOS simply work the same on Linux. I didn’t even switch out my &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; file, which is one of the first things I do on my Mac installs. The one that comes with the OS is decent to build upon.&lt;/p&gt;
+
+&lt;p&gt;Here’s a list of stuff I’d like to see in future releases or through third-party software:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The ability to move the dock to the left or right side of the screen&lt;/li&gt;
+  &lt;li&gt;Resizable dock icons, not just &lt;em&gt;large&lt;/em&gt; or &lt;em&gt;normal&lt;/em&gt; settings&lt;/li&gt;
+  &lt;li&gt;The ability to select my refresh rate via the system settings dialog&lt;/li&gt;
+  &lt;li&gt;The ability to install &lt;code class=&quot;highlighter-rouge&quot;&gt;.deb&lt;/code&gt; files via the file explorer instead of the Terminal&lt;/li&gt;
+  &lt;li&gt;A system information screen that shows more than high level system details&lt;/li&gt;
+  &lt;li&gt;Some kind of task manager where I can monitor system resource usage and kill processes&lt;/li&gt;
+  &lt;li&gt;A proper replacement for Divvy, which I use extensively on the Mac&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I may take a stab at some of these things since I don’t see myself moving away from elementary OS anytime soon.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2017 Edit:&lt;/strong&gt; I did move away from elementary OS. &lt;a href=&quot;/hello-again-macbook&quot;&gt;Read here why.&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">It’s been about a week of using elementary OS and I’ve compiled a few of my first impressions. First off, I want to start off with that I understand that elementary is still somewhat immature, so don’t take any of the criticism as me putting the project on blast. Far from it, in fact, but more on that later.</summary></entry><entry><title type="html">RSpec be_truthy, exist, or be true?</title><link href="/rspec-be_truthy-exists-or-be-true" rel="alternate" type="text/html" title="RSpec be_truthy, exist, or be true?" /><published>2016-10-14T00:00:00-07:00</published><updated>2016-10-14T00:00:00-07:00</updated><id>/rspec-be_truthy-exists-or-be-true</id><content type="html" xml:base="/rspec-be_truthy-exists-or-be-true">&lt;p&gt;The documentation for RSpec is amazingly detailed, but sometimes falls a bit short on when to apply certain matchers. In many of the specs that I’ve reviewed, incorrect matchers were used to test for pure Boolean values.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1 id=&quot;be_truthy-and-be_falsey&quot;&gt;be_truthy and be_falsey&lt;/h1&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be_truthy&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be_falsey&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The matcher &lt;code class=&quot;highlighter-rouge&quot;&gt;be_truthy&lt;/code&gt; should only be used when expecting an evaluation to be &lt;em&gt;not&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; and &lt;em&gt;not&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The matcher &lt;code class=&quot;highlighter-rouge&quot;&gt;be_falsey&lt;/code&gt; should only be used when expecting an evaluation to be &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Notice that &lt;code class=&quot;highlighter-rouge&quot;&gt;be_truthy&lt;/code&gt; does not actually check for the Boolean value &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you have a method that should only be evaluated into a Boolean, do not use these matchers for your spec.&lt;/p&gt;
+
+&lt;h1 id=&quot;be-true-and-be-false&quot;&gt;be true and be false&lt;/h1&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The matchers &lt;code class=&quot;highlighter-rouge&quot;&gt;be true&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;be false&lt;/code&gt; expect &lt;em&gt;only&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; returned, respectively. This is a straight up value comparison, so use this if your method or evaluation should only return &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;exist&quot;&gt;exist&lt;/h1&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exist&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The documentation for RSpec lists &lt;code class=&quot;highlighter-rouge&quot;&gt;exist&lt;/code&gt; right along with &lt;code class=&quot;highlighter-rouge&quot;&gt;be true&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;be_truthy&lt;/code&gt;, though it’s not really related. A spec that matches on &lt;code class=&quot;highlighter-rouge&quot;&gt;exist&lt;/code&gt; will only pass if the object has implemented the &lt;code class=&quot;highlighter-rouge&quot;&gt;exists?&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;exist?&lt;/code&gt; methods &lt;em&gt;and&lt;/em&gt; the result of its evaluation matches the &lt;code class=&quot;highlighter-rouge&quot;&gt;is_truthy&lt;/code&gt; matcher.&lt;/p&gt;
+
+&lt;p&gt;This means that passing in &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;, will fail the test dramatically since none of them implement &lt;code class=&quot;highlighter-rouge&quot;&gt;exist?&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;exists?&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;whats-the-big-deal&quot;&gt;What’s the Big Deal?&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; is that sneaky value that creeps its way into your code when you don’t expect it. It disguises itself as a missing element in a hash or an unexpected API response value and worms its way though your codebase until it hits &lt;em&gt;that method&lt;/em&gt;. &lt;em&gt;That method&lt;/em&gt; never expected &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; and treats it just like any other value, spitting out a result that should be &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;, but is in actuality &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. The spec for &lt;em&gt;that method&lt;/em&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;is_falsey&lt;/code&gt; and passes beautifully. Meanwhile, your application breaks and you now have a table column populated with &lt;code class=&quot;highlighter-rouge&quot;&gt;NULL&lt;/code&gt; values. Whoops. Good luck figuring out where that happened.&lt;/p&gt;
+
+&lt;p&gt;This may seem pedantic and unlikely to happen, but entropy increases as your application grows more complex and these types of problems begin rearing their ugly heads. Especially in dynamically typed languages such as Ruby. So, in most cases, use &lt;code class=&quot;highlighter-rouge&quot;&gt;be true&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;be false&lt;/code&gt; unless you really have a  good reason not to do so.&lt;/p&gt;</content><author><name></name></author><summary type="html">The documentation for RSpec is amazingly detailed, but sometimes falls a bit short on when to apply certain matchers. In many of the specs that I’ve reviewed, incorrect matchers were used to test for pure Boolean values.</summary></entry></feed>
