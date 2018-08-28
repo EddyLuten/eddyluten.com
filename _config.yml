@@ -2,12 +2,13 @@
 title: Eddy Luten
 email: eddyluten@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Freelance Programmer at large in the Bay Area.
+  Programmer at large in the Bay Area.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: eddyluten
 github_username:  EddyLuten
 linkedin_username: eddyluten
+mastodon_username: "@luten"
 excerpt_separator: <!--more-->
 google_analytics: UA-301718-12
 permalink: /:title
