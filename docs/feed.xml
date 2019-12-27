@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-08-27T21:00:29-07:00</updated><id>/</id><title type="html">Eddy Luten</title><subtitle>Programmer at large in the Bay Area.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-12-26T17:06:24-08:00</updated><id>/feed.xml</id><title type="html">Eddy Luten</title><subtitle>Programmer at large in the Bay Area.
 </subtitle><entry><title type="html">Hello Again, Macbook</title><link href="/hello-again-macbook" rel="alternate" type="text/html" title="Hello Again, Macbook" /><published>2017-06-16T00:00:00-07:00</published><updated>2017-06-16T00:00:00-07:00</updated><id>/hello-again-macbook</id><content type="html" xml:base="/hello-again-macbook">&lt;div class=&quot;center bottom-padded&quot;&gt;&lt;img src=&quot;/images/hello-again.jpg&quot; /&gt;&lt;/div&gt;
 
 &lt;p&gt;Well, that didn’t take too long.&lt;/p&gt;
@@ -19,23 +19,7 @@
 
 &lt;p&gt;Overall, not too bad.&lt;/p&gt;
 
-&lt;p&gt;I may do a long term follow up to see if it will last as long as its 2012 15” predecessor. Until then, I’m just happy that I can move files to the trash and potentially restore them if I really want.&lt;/p&gt;</content><author><name></name></author><summary type="html">Well, that didn’t take too long. If you’ve been following along, you know that I’ve been trying to use Linux for my local development purposes on an Intel NUC (as well as a Lenovo laptop). I have to say, I still love the NUC and am going to find another use for it somehow, I’m just not sure what yet. However, Linux was somewhat of a disaster for me.</summary></entry><entry><title type="html">PortAudio Panic and No Devices Found</title><link href="/portaudio-panic-and-no-devices-found" rel="alternate" type="text/html" title="PortAudio Panic and No Devices Found" /><published>2017-02-13T23:00:00-08:00</published><updated>2017-02-13T23:00:00-08:00</updated><id>/portaudio-panic-and-no-devices-found</id><content type="html" xml:base="/portaudio-panic-and-no-devices-found">&lt;p&gt;Leaving this here for the poor souls on Linux systems that run into errors accessing the default input or output devices using PortAudio and get nothing back.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Maybe you’re using rust-portaudio and your application panics after accessing &lt;code class=&quot;highlighter-rouge&quot;&gt;default_output_device&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;default_intput_device&lt;/code&gt; even though you clearly have default audio devices set:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;thread ‘main’ panicked at ‘called `Option::unwrap()` on a `None` value’&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This pretty much means that you don’t have libasound installed on your system. While the PortAudio project &lt;a href=&quot;http://portaudio.com/docs/v19-doxydocs/compile_linux.html&quot;&gt;mentions this&lt;/a&gt; in its build documentation, the Rust version of this library doesn’t explicitly mention this dependency.&lt;/p&gt;
-
-&lt;p&gt;On Debian-based systems (Ubuntu and whathaveye), run the following command to cure this:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libasound2 libasound2-dev
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">Leaving this here for the poor souls on Linux systems that run into errors accessing the default input or output devices using PortAudio and get nothing back.</summary></entry><entry><title type="html">Getting Rusty Code and Racer to Work Together</title><link href="/getting-rusty-code-and-racer-to-work-together" rel="alternate" type="text/html" title="Getting Rusty Code and Racer to Work Together" /><published>2017-02-13T23:00:00-08:00</published><updated>2017-02-13T23:00:00-08:00</updated><id>/getting-rusty-code-and-racer-to-work-together</id><content type="html" xml:base="/getting-rusty-code-and-racer-to-work-together">&lt;p&gt;While installing the Rusty Code extension in Visual Studio Code is pretty straightforward, Racer wouldn’t work out of the box after clicking the “install dependencies” (or whatever it was called) button. In fact, I never received a confirmation message that the dependencies finished installing.&lt;/p&gt;
+&lt;p&gt;I may do a long term follow up to see if it will last as long as its 2012 15” predecessor. Until then, I’m just happy that I can move files to the trash and potentially restore them if I really want.&lt;/p&gt;</content><author><name></name></author><summary type="html">Well, that didn’t take too long. If you’ve been following along, you know that I’ve been trying to use Linux for my local development purposes on an Intel NUC (as well as a Lenovo laptop). I have to say, I still love the NUC and am going to find another use for it somehow, I’m just not sure what yet. However, Linux was somewhat of a disaster for me.</summary></entry><entry><title type="html">Getting Rusty Code and Racer to Work Together</title><link href="/getting-rusty-code-and-racer-to-work-together" rel="alternate" type="text/html" title="Getting Rusty Code and Racer to Work Together" /><published>2017-02-13T23:00:00-08:00</published><updated>2017-02-13T23:00:00-08:00</updated><id>/getting-rusty-code-and-racer-to-work-together</id><content type="html" xml:base="/getting-rusty-code-and-racer-to-work-together">&lt;p&gt;While installing the Rusty Code extension in Visual Studio Code is pretty straightforward, Racer wouldn’t work out of the box after clicking the “install dependencies” (or whatever it was called) button. In fact, I never received a confirmation message that the dependencies finished installing.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -57,7 +41,23 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Or wherever else Cargo is installed on your machine.&lt;/p&gt;</content><author><name></name></author><summary type="html">While installing the Rusty Code extension in Visual Studio Code is pretty straightforward, Racer wouldn’t work out of the box after clicking the “install dependencies” (or whatever it was called) button. In fact, I never received a confirmation message that the dependencies finished installing.</summary></entry><entry><title type="html">Bye MacBook, Hello Intel NUC</title><link href="/bye-macbook-hello-intel-nuc" rel="alternate" type="text/html" title="Bye MacBook, Hello Intel NUC" /><published>2016-10-30T00:00:01-07:00</published><updated>2016-10-30T00:00:01-07:00</updated><id>/bye-macbook-hello-intel-nuc</id><content type="html" xml:base="/bye-macbook-hello-intel-nuc">&lt;p&gt;For a while now, my 2011 13” i5 MacBook Air which I use for development purposes has been showing signs of pending death: flickering screen when moving the lid, excessive heat, inability to be charged, killing 2 replacement batteries and 3 chargers, slowing down with new OS X/macOS installs, etc. etc.&lt;/p&gt;
+&lt;p&gt;Or wherever else Cargo is installed on your machine.&lt;/p&gt;</content><author><name></name></author><summary type="html">While installing the Rusty Code extension in Visual Studio Code is pretty straightforward, Racer wouldn’t work out of the box after clicking the “install dependencies” (or whatever it was called) button. In fact, I never received a confirmation message that the dependencies finished installing.</summary></entry><entry><title type="html">PortAudio Panic and No Devices Found</title><link href="/portaudio-panic-and-no-devices-found" rel="alternate" type="text/html" title="PortAudio Panic and No Devices Found" /><published>2017-02-13T23:00:00-08:00</published><updated>2017-02-13T23:00:00-08:00</updated><id>/portaudio-panic-and-no-devices-found</id><content type="html" xml:base="/portaudio-panic-and-no-devices-found">&lt;p&gt;Leaving this here for the poor souls on Linux systems that run into errors accessing the default input or output devices using PortAudio and get nothing back.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Maybe you’re using rust-portaudio and your application panics after accessing &lt;code class=&quot;highlighter-rouge&quot;&gt;default_output_device&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;default_intput_device&lt;/code&gt; even though you clearly have default audio devices set:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;thread ‘main’ panicked at ‘called `Option::unwrap()` on a `None` value’&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This pretty much means that you don’t have libasound installed on your system. While the PortAudio project &lt;a href=&quot;http://portaudio.com/docs/v19-doxydocs/compile_linux.html&quot;&gt;mentions this&lt;/a&gt; in its build documentation, the Rust version of this library doesn’t explicitly mention this dependency.&lt;/p&gt;
+
+&lt;p&gt;On Debian-based systems (Ubuntu and whathaveye), run the following command to cure this:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libasound2 libasound2-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Leaving this here for the poor souls on Linux systems that run into errors accessing the default input or output devices using PortAudio and get nothing back.</summary></entry><entry><title type="html">Bye MacBook, Hello Intel NUC</title><link href="/bye-macbook-hello-intel-nuc" rel="alternate" type="text/html" title="Bye MacBook, Hello Intel NUC" /><published>2016-10-30T00:00:01-07:00</published><updated>2016-10-30T00:00:01-07:00</updated><id>/bye-macbook-hello-intel-nuc</id><content type="html" xml:base="/bye-macbook-hello-intel-nuc">&lt;p&gt;For a while now, my 2011 13” i5 MacBook Air which I use for development purposes has been showing signs of pending death: flickering screen when moving the lid, excessive heat, inability to be charged, killing 2 replacement batteries and 3 chargers, slowing down with new OS X/macOS installs, etc. etc.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
