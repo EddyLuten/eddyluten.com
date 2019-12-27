@@ -6,9 +6,21 @@ permalink: /projects/
 
 Here are some personal projects I have worked on.
 
+* [lowpoly_bot](https://github.com/EddyLuten/lowpoly_bot) &middot; 2017-2019 (MIT Licensed)
+
+    A deactivated Twitter bot that responded to anything posted to the #lowpoly hashtag, retweeting and following anyone that posted to it. Includes support for filtering out spammers, written in Python 3 with a SQLite database backend (included).
+
+* [trace.rs](https://github.com/EddyLuten/trace.rs) &middot; 2019 (MIT Licensed)
+
+    A toy ray tracer written in Rust as a learning exercise.
+
 * [Sort Hangouts Google Chrome Extension](https://github.com/EddyLuten/sort-hangouts) &middot; 2018 (MIT Licensed)
 
     A [Google Chrome Extension](https://chrome.google.com/webstore/detail/sort-hangouts-tab-in-gmai/kidpfddmdpkgilenchiaeehgfilnhapf) to sort the Google Hangouts tab in GMail by status.
+
+* [ahrda](https://github.com/EddyLuten/ahrda)
+
+    A backup of Ahrda.info, which used to host a Wiki detailing the world in which my homebrew D&D game was set. The site no longer exists, but its contents were saved onto GitHub.
 
 * [dotfiles](https://github.com/EddyLuten/dotfiles) &middot; 2018 - present (MIT Licensed)
 
