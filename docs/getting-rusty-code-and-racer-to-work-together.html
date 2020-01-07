@@ -137,15 +137,13 @@
 
 <p>So, it turns out that a default Rust install doesn’t come with the source code and simply running the following command makes the whole thing work:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>rustup component add rust-src
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rustup component add rust-src
+</code></pre></div></div>
 
 <p>If running <code class="highlighter-rouge">rustup</code> doesn’t work, make sure that your <code class="highlighter-rouge">cargo/bin</code> directory is added to your <code class="highlighter-rouge">PATH</code>, by adding the following line to your <code class="highlighter-rouge">.bashrc</code> script:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nv">PATH</span><span class="o">=</span>~/.cargo/bin:<span class="nv">$PATH</span>
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">PATH</span><span class="o">=</span>~/.cargo/bin:<span class="nv">$PATH</span>
+</code></pre></div></div>
 
 <p>Or wherever else Cargo is installed on your machine.</p>
 

@@ -1,5 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-12-26T17:07:42-08:00</updated><id>/feed.xml</id><title type="html">Eddy Luten</title><subtitle>Programmer at large in the Bay Area.
-</subtitle><entry><title type="html">Hello Again, Macbook</title><link href="/hello-again-macbook" rel="alternate" type="text/html" title="Hello Again, Macbook" /><published>2017-06-16T00:00:00-07:00</published><updated>2017-06-16T00:00:00-07:00</updated><id>/hello-again-macbook</id><content type="html" xml:base="/hello-again-macbook">&lt;div class=&quot;center bottom-padded&quot;&gt;&lt;img src=&quot;/images/hello-again.jpg&quot; /&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-01-06T17:16:11-08:00</updated><id>/feed.xml</id><title type="html">Eddy Luten</title><subtitle>Programmer at large in the Bay Area.
+</subtitle><entry><title type="html">How to Unlike All Liked Tweets</title><link href="/how-to-unlike-all-liked-tweets" rel="alternate" type="text/html" title="How to Unlike All Liked Tweets" /><published>2020-01-05T23:00:00-08:00</published><updated>2020-01-05T23:00:00-08:00</updated><id>/how-to-unlike-all-liked-tweets</id><content type="html" xml:base="/how-to-unlike-all-liked-tweets">&lt;p&gt;Happy New Year! So you want to delete everything you’ve ever liked on Twitter?&lt;/p&gt;
+
+&lt;p&gt;Open up your browser’s developer console and paste this one-liner:&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'[data-testid=&quot;unlike&quot;]'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollHeight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, let it run until it’s done.&lt;/p&gt;
+
+&lt;p&gt;What it does: It unlikes all tweets that have an unlike attribute set, then
+scrolls the window to the bottom of the viewport, allows 2.5 seconds to load new
+tweets and starts over again.&lt;/p&gt;</content><author><name></name></author><summary type="html">Happy New Year! So you want to delete everything you’ve ever liked on Twitter? Open up your browser’s developer console and paste this one-liner: window.setInterval(() =&amp;gt; { document.querySelectorAll('[data-testid=&quot;unlike&quot;]').forEach(e =&amp;gt; e.click()); window.scrollTo(0,document.body.scrollHeight); }, 2500); Now, let it run until it’s done. What it does: It unlikes all tweets that have an unlike attribute set, then scrolls the window to the bottom of the viewport, allows 2.5 seconds to load new tweets and starts over again.</summary></entry><entry><title type="html">Hello Again, Macbook</title><link href="/hello-again-macbook" rel="alternate" type="text/html" title="Hello Again, Macbook" /><published>2017-06-16T00:00:00-07:00</published><updated>2017-06-16T00:00:00-07:00</updated><id>/hello-again-macbook</id><content type="html" xml:base="/hello-again-macbook">&lt;div class=&quot;center bottom-padded&quot;&gt;&lt;img src=&quot;/images/hello-again.jpg&quot; /&gt;&lt;/div&gt;
 
 &lt;p&gt;Well, that didn’t take too long.&lt;/p&gt;
 
@@ -31,15 +42,13 @@
 
 &lt;p&gt;So, it turns out that a default Rust install doesn’t come with the source code and simply running the following command makes the whole thing work:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rustup component add rust-src
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rustup component add rust-src
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If running &lt;code class=&quot;highlighter-rouge&quot;&gt;rustup&lt;/code&gt; doesn’t work, make sure that your &lt;code class=&quot;highlighter-rouge&quot;&gt;cargo/bin&lt;/code&gt; directory is added to your &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt;, by adding the following line to your &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; script:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.cargo/bin:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.cargo/bin:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Or wherever else Cargo is installed on your machine.&lt;/p&gt;</content><author><name></name></author><summary type="html">While installing the Rusty Code extension in Visual Studio Code is pretty straightforward, Racer wouldn’t work out of the box after clicking the “install dependencies” (or whatever it was called) button. In fact, I never received a confirmation message that the dependencies finished installing.</summary></entry><entry><title type="html">PortAudio Panic and No Devices Found</title><link href="/portaudio-panic-and-no-devices-found" rel="alternate" type="text/html" title="PortAudio Panic and No Devices Found" /><published>2017-02-13T23:00:00-08:00</published><updated>2017-02-13T23:00:00-08:00</updated><id>/portaudio-panic-and-no-devices-found</id><content type="html" xml:base="/portaudio-panic-and-no-devices-found">&lt;p&gt;Leaving this here for the poor souls on Linux systems that run into errors accessing the default input or output devices using PortAudio and get nothing back.&lt;/p&gt;
 
@@ -55,9 +64,8 @@
 
 &lt;p&gt;On Debian-based systems (Ubuntu and whathaveye), run the following command to cure this:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install libasound2 libasound2-dev
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">Leaving this here for the poor souls on Linux systems that run into errors accessing the default input or output devices using PortAudio and get nothing back.</summary></entry><entry><title type="html">Bye MacBook, Hello Intel NUC</title><link href="/bye-macbook-hello-intel-nuc" rel="alternate" type="text/html" title="Bye MacBook, Hello Intel NUC" /><published>2016-10-30T00:00:01-07:00</published><updated>2016-10-30T00:00:01-07:00</updated><id>/bye-macbook-hello-intel-nuc</id><content type="html" xml:base="/bye-macbook-hello-intel-nuc">&lt;p&gt;For a while now, my 2011 13” i5 MacBook Air which I use for development purposes has been showing signs of pending death: flickering screen when moving the lid, excessive heat, inability to be charged, killing 2 replacement batteries and 3 chargers, slowing down with new OS X/macOS installs, etc. etc.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install libasound2 libasound2-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Leaving this here for the poor souls on Linux systems that run into errors accessing the default input or output devices using PortAudio and get nothing back.</summary></entry><entry><title type="html">Bye MacBook, Hello Intel NUC</title><link href="/bye-macbook-hello-intel-nuc" rel="alternate" type="text/html" title="Bye MacBook, Hello Intel NUC" /><published>2016-10-30T00:00:01-07:00</published><updated>2016-10-30T00:00:01-07:00</updated><id>/bye-macbook-hello-intel-nuc</id><content type="html" xml:base="/bye-macbook-hello-intel-nuc">&lt;p&gt;For a while now, my 2011 13” i5 MacBook Air which I use for development purposes has been showing signs of pending death: flickering screen when moving the lid, excessive heat, inability to be charged, killing 2 replacement batteries and 3 chargers, slowing down with new OS X/macOS installs, etc. etc.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -148,10 +156,9 @@
 
 &lt;h1 id=&quot;be_truthy-and-be_falsey&quot;&gt;be_truthy and be_falsey&lt;/h1&gt;
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be_truthy&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be_truthy&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be_falsey&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The matcher &lt;code class=&quot;highlighter-rouge&quot;&gt;be_truthy&lt;/code&gt; should only be used when expecting an evaluation to be &lt;em&gt;not&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; and &lt;em&gt;not&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;.&lt;/p&gt;
 
@@ -163,18 +170,16 @@
 
 &lt;h1 id=&quot;be-true-and-be-false&quot;&gt;be true and be false&lt;/h1&gt;
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The matchers &lt;code class=&quot;highlighter-rouge&quot;&gt;be true&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;be false&lt;/code&gt; expect &lt;em&gt;only&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; returned, respectively. This is a straight up value comparison, so use this if your method or evaluation should only return &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;exist&quot;&gt;exist&lt;/h1&gt;
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exist&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_evaluation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exist&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The documentation for RSpec lists &lt;code class=&quot;highlighter-rouge&quot;&gt;exist&lt;/code&gt; right along with &lt;code class=&quot;highlighter-rouge&quot;&gt;be true&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;be_truthy&lt;/code&gt;, though it’s not really related. A spec that matches on &lt;code class=&quot;highlighter-rouge&quot;&gt;exist&lt;/code&gt; will only pass if the object has implemented the &lt;code class=&quot;highlighter-rouge&quot;&gt;exists?&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;exist?&lt;/code&gt; methods &lt;em&gt;and&lt;/em&gt; the result of its evaluation matches the &lt;code class=&quot;highlighter-rouge&quot;&gt;is_truthy&lt;/code&gt; matcher.&lt;/p&gt;
 

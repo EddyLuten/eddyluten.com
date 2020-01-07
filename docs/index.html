@@ -121,6 +121,33 @@
     
       <li class="post-content">
         
+        <span class="post-meta">Jan 6, 2020</span>
+
+        <h2>
+          <a class="post-link" href="/how-to-unlike-all-liked-tweets">How to Unlike All Liked Tweets</a>
+        </h2>
+        <p>
+          <p>Happy New Year! So you want to delete everything you’ve ever liked on Twitter?</p>
+
+<p>Open up your browser’s developer console and paste this one-liner:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'[data-testid="unlike"]'</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">click</span><span class="p">());</span> <span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollHeight</span><span class="p">);</span> <span class="p">},</span> <span class="mi">2500</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Now, let it run until it’s done.</p>
+
+<p>What it does: It unlikes all tweets that have an unlike attribute set, then
+scrolls the window to the bottom of the viewport, allows 2.5 seconds to load new
+tweets and starts over again.</p>
+
+        </p>
+        <p>
+          <a href="/how-to-unlike-all-liked-tweets">Read More&hellip;</a>
+        </p>
+      </li>
+    
+      <li class="post-content">
+        
         <span class="post-meta">Jun 16, 2017</span>
 
         <h2>

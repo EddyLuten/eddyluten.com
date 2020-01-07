@@ -6,24 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>RSpec be_truthy, exist, or be true?</title>
-  <meta name="description" content="The documentation for RSpec is amazingly detailed, but sometimes falls a bit short on when to apply certain matchers. In many of the specs that I’ve reviewed...">
+  <title>How to Unlike All Liked Tweets</title>
+  <meta name="description" content="Happy New Year! So you want to delete everything you’ve ever liked on Twitter? Open up your browser’s developer console and paste this one-liner: window.setI...">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="/rspec-be_truthy-exists-or-be-true">
+  <link rel="canonical" href="/how-to-unlike-all-liked-tweets">
   <link rel="alternate" type="application/rss+xml" title="Eddy Luten" href="/feed.xml">
 
-  <meta name="og:url" content="/rspec-be_truthy-exists-or-be-true">
+  <meta name="og:url" content="/how-to-unlike-all-liked-tweets">
   <meta property="twitter:card" content="summary">
   <meta property="twitter:site" content="@eddyluten">
-  <meta property="twitter:title" content="RSpec be_truthy, exist, or be true?">
-  <meta property="twitter:description" content="The documentation for RSpec is amazingly detailed, but sometimes falls a bit short on when to apply certain matchers. In many of the specs that I’ve reviewed...">
+  <meta property="twitter:title" content="How to Unlike All Liked Tweets">
+  <meta property="twitter:description" content="Happy New Year! So you want to delete everything you’ve ever liked on Twitter? Open up your browser’s developer console and paste this one-liner: window.setI...">
   <meta property="twitter:creator" content="@eddyluten">
   <meta property="twitter:image" content="/assets/large-avatar.jpg">
 
-  <meta property="og:title" content="RSpec be_truthy, exist, or be true?">
+  <meta property="og:title" content="How to Unlike All Liked Tweets">
   <meta property="og:type" content="blog">
-  <meta property="og:description" content="The documentation for RSpec is amazingly detailed, but sometimes falls a bit short on when to apply certain matchers. In many of the specs that I’ve reviewed...">
+  <meta property="og:description" content="Happy New Year! So you want to delete everything you’ve ever liked on Twitter? Open up your browser’s developer console and paste this one-liner: window.setI...">
   <meta property="og:image" content="/assets/large-avatar.jpg">
   <meta property="og:site_name" content="Eddy Luten">
   <meta property="og:locale" content="en_US" />
@@ -115,58 +115,28 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">RSpec be_truthy, exist, or be true?</h1>
+    <h1 class="post-title" itemprop="name headline">How to Unlike All Liked Tweets</h1>
     <p class="post-meta">
-      <time datetime="2016-10-14T00:00:00-07:00" itemprop="datePublished">
+      <time datetime="2020-01-05T23:00:00-08:00" itemprop="datePublished">
         
-        Oct 14, 2016
+        Jan 6, 2020
       </time>
     </p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>The documentation for RSpec is amazingly detailed, but sometimes falls a bit short on when to apply certain matchers. In many of the specs that I’ve reviewed, incorrect matchers were used to test for pure Boolean values.</p>
+    <p>Happy New Year! So you want to delete everything you’ve ever liked on Twitter?</p>
 
-<!--more-->
+<p>Open up your browser’s developer console and paste this one-liner:</p>
 
-<h1 id="be_truthy-and-be_falsey">be_truthy and be_falsey</h1>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">expect</span><span class="p">(</span><span class="n">some_evaluation</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_truthy</span>
-<span class="n">expect</span><span class="p">(</span><span class="n">some_evaluation</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_falsey</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'[data-testid="unlike"]'</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">click</span><span class="p">());</span> <span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollHeight</span><span class="p">);</span> <span class="p">},</span> <span class="mi">2500</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>The matcher <code class="highlighter-rouge">be_truthy</code> should only be used when expecting an evaluation to be <em>not</em> <code class="highlighter-rouge">nil</code> and <em>not</em> <code class="highlighter-rouge">false</code>.</p>
+<p>Now, let it run until it’s done.</p>
 
-<p>The matcher <code class="highlighter-rouge">be_falsey</code> should only be used when expecting an evaluation to be <code class="highlighter-rouge">nil</code> or <code class="highlighter-rouge">false</code>.</p>
-
-<p>Notice that <code class="highlighter-rouge">be_truthy</code> does not actually check for the Boolean value <code class="highlighter-rouge">true</code>.</p>
-
-<p>If you have a method that should only be evaluated into a Boolean, do not use these matchers for your spec.</p>
-
-<h1 id="be-true-and-be-false">be true and be false</h1>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">expect</span><span class="p">(</span><span class="n">some_evaluation</span><span class="p">).</span><span class="nf">to</span> <span class="n">be</span> <span class="kp">true</span>
-<span class="n">expect</span><span class="p">(</span><span class="n">some_evaluation</span><span class="p">).</span><span class="nf">to</span> <span class="n">be</span> <span class="kp">false</span>
-</code></pre></div></div>
-
-<p>The matchers <code class="highlighter-rouge">be true</code> and <code class="highlighter-rouge">be false</code> expect <em>only</em> <code class="highlighter-rouge">true</code> and <code class="highlighter-rouge">false</code> returned, respectively. This is a straight up value comparison, so use this if your method or evaluation should only return <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code>.</p>
-
-<h1 id="exist">exist</h1>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">expect</span><span class="p">(</span><span class="n">some_evaluation</span><span class="p">).</span><span class="nf">to</span> <span class="n">exist</span>
-</code></pre></div></div>
-
-<p>The documentation for RSpec lists <code class="highlighter-rouge">exist</code> right along with <code class="highlighter-rouge">be true</code> and <code class="highlighter-rouge">be_truthy</code>, though it’s not really related. A spec that matches on <code class="highlighter-rouge">exist</code> will only pass if the object has implemented the <code class="highlighter-rouge">exists?</code> or <code class="highlighter-rouge">exist?</code> methods <em>and</em> the result of its evaluation matches the <code class="highlighter-rouge">is_truthy</code> matcher.</p>
-
-<p>This means that passing in <code class="highlighter-rouge">true</code>, <code class="highlighter-rouge">false</code>, or <code class="highlighter-rouge">nil</code>, will fail the test dramatically since none of them implement <code class="highlighter-rouge">exist?</code> or <code class="highlighter-rouge">exists?</code>.</p>
-
-<h1 id="whats-the-big-deal">What’s the Big Deal?</h1>
-
-<p><code class="highlighter-rouge">nil</code></p>
-
-<p><code class="highlighter-rouge">nil</code> is that sneaky value that creeps its way into your code when you don’t expect it. It disguises itself as a missing element in a hash or an unexpected API response value and worms its way though your codebase until it hits <em>that method</em>. <em>That method</em> never expected <code class="highlighter-rouge">nil</code> and treats it just like any other value, spitting out a result that should be <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code>, but is in actuality <code class="highlighter-rouge">nil</code>. The spec for <em>that method</em> uses <code class="highlighter-rouge">is_falsey</code> and passes beautifully. Meanwhile, your application breaks and you now have a table column populated with <code class="highlighter-rouge">NULL</code> values. Whoops. Good luck figuring out where that happened.</p>
-
-<p>This may seem pedantic and unlikely to happen, but entropy increases as your application grows more complex and these types of problems begin rearing their ugly heads. Especially in dynamically typed languages such as Ruby. So, in most cases, use <code class="highlighter-rouge">be true</code> or <code class="highlighter-rouge">be false</code> unless you really have a  good reason not to do so.</p>
+<p>What it does: It unlikes all tweets that have an unlike attribute set, then
+scrolls the window to the bottom of the viewport, allows 2.5 seconds to load new
+tweets and starts over again.</p>
 
   </div>
 
